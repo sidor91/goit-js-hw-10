@@ -14,7 +14,7 @@ countryList.style.listStyle = "none";
 countryList.style.margin = '0';
 countryList.style.padding = '0';
 
-inputField.addEventListener('input', debounce(onInputAction, [wait=DEBOUNCE_DELAY]));
+inputField.addEventListener('input', debounce(onInputAction, [DEBOUNCE_DELAY]));
 
 function onInputAction(e) {
     countryList.innerHTML = '';
@@ -63,4 +63,3 @@ function renderCountryCard(country) {
       </ul>`;
     countryInfo.innerHTML = countryMarkup;
 }
-// 
