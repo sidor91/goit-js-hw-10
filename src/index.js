@@ -63,3 +63,4 @@ function renderCountryCard(country) {
       </ul>`;
     countryInfo.innerHTML = countryMarkup;
 }
+// 
