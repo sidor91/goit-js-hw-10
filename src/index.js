@@ -53,7 +53,7 @@ function renderCountryList(countries) {
 function renderCountryCard(country) {
     console.log(`rendering ${country.name.official}`)
     const countryMarkup = `<div style="display:flex; align-items:center;">
-        <img src=${country.flags.svg} alt=${country.name.official} width="60">
+        <img src=${country.flags.svg} alt=${country.name.official} width="60" style="margin-right:15px;">
         <h1>${country.name.official}</h1>
       </div>
       <ul style="list-style:none; margin:0; padding:0">
