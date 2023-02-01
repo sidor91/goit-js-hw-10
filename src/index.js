@@ -23,19 +23,16 @@ function onInputAction(e) {
     fetchCountries(countryName)
         .then(
             data => {
+                console.log(data);
                 if (data.length > 10) {
-                    console.log(data);
                     return Notiflix.Notify.warning('Too many matches found. Please enter a more specific name.');
                 }
                 else if (data.length >= 2 && data.length <= 10) {
-                    console.log(data);
                     return renderCountryList(data);
                 }
                 else if (data.length === 1) {
-                    console.log(...data);
                     return renderCountryCard(...data);
                 } else if (data.status === 404) {
-                    console.log(data);
                     return Notiflix.Notify.failure('Oops, there is no country with that name');
                 }
             }
@@ -51,7 +48,6 @@ function renderCountryList(countries) {
 }
 
 function renderCountryCard(country) {
-    console.log(`rendering ${country.name.official}`)
     const countryMarkup = `<div style="display:flex; align-items:center;">
         <img src=${country.flags.svg} alt=${country.name.official} width="60" style="margin-right:15px;">
         <h1>${country.name.official}</h1>
