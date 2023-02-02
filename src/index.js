@@ -33,7 +33,7 @@ function onInputAction(e) {
                 else if (data.length === 1) {
                     return renderCountryCard(...data);
                 } else if (data.status === 404) {
-                    return Notiflix.Notify.failure('Oops, there is no country with that name');
+                    throw new Error(Notiflix.Notify.failure('Oops, there is no country with that name'));
                 }
             }
     )
